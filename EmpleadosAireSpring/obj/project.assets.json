@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ELENA UMANZOR\\source\\repos\\EmpleadosAireSpring\\EmpleadosAireSpring\\EmpleadosAireSpring.csproj",
+      "projectUniqueName": "C:\\Users\\ELENA UMANZOR\\Desktop\\EmpleadosProject\\EmpleadosAireSpring\\EmpleadosAireSpring.csproj",
       "projectName": "EmpleadosAireSpring",
-      "projectPath": "C:\\Users\\ELENA UMANZOR\\source\\repos\\EmpleadosAireSpring\\EmpleadosAireSpring\\EmpleadosAireSpring.csproj",
+      "projectPath": "C:\\Users\\ELENA UMANZOR\\Desktop\\EmpleadosProject\\EmpleadosAireSpring\\EmpleadosAireSpring.csproj",
       "packagesPath": "C:\\Users\\ELENA UMANZOR\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ELENA UMANZOR\\source\\repos\\EmpleadosAireSpring\\EmpleadosAireSpring\\obj\\",
+      "outputPath": "C:\\Users\\ELENA UMANZOR\\Desktop\\EmpleadosProject\\EmpleadosAireSpring\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
