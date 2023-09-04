@@ -1,0 +1,70 @@
+﻿@model IEnumerable<WebApplication1.Models.Employee>
+
+@{
+    ViewData["Title"] = "Agenda Empleados";
+}
+
+<h1>Agenda Empleados</h1>
+<p>
+    <a asp-action="Create">
+        <button type="button" class="btn btn-success">Crear nuevo registro</button>
+    </a>
+</p>
+<form method="get" action="@Url.Action("Index")">
+    <div class="input-group" style="width: 300px;">
+        <input type="text" name="searchString" id="search" class="form-control" value="@ViewBag.CurrentFilter" placeholder="Buscar..." />
+        <div class="input-group-append">
+            <button type="submit" class="btn btn-primary" style="margin-left: 5px;">Buscar</button>
+        </div>
+    </div>
+</form>
+
+
+<table class="table table-striped table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th>
+                Nombre
+            </th>
+            <th>
+                Apellido
+            </th>
+            <th>
+                Telefono
+            </th>
+            <th>
+                Codigo Zip
+            </th>
+            <th>
+                Fecha Contratacion
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmployeeFirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmployeeLastName)
+                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeePhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeZip)
+            </td>
+            <td>
+                 @item.HireDate.ToString("MM/dd/yyyy")
+            </td>
+            <td>
+                    <a asp-action="Edit" asp-route-id="@item.EmployeeID"><button type="button" class="btn btn-secondary">Editar</button></a> |
+                    <a asp-action="Details" asp-route-id="@item.EmployeeID"><button type="button" class="btn btn-info">Detalles</button></a> |
+                    <a asp-action="Delete" asp-route-id="@item.EmployeeID"><button type="button" class="btn btn-danger">Eliminar</button></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

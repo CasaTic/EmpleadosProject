@@ -1,8 +1,17 @@
+using EmpleadosAireSpring.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+//Defining the DB Context 
+builder.Services.AddDbContext<DBEmployeeContext>(opciones =>
+{
+    opciones.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionString"));
+}
 
+);
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
